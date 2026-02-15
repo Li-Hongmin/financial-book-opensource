@@ -1,0 +1,88 @@
+/* 移动端适配 */
+:root {
+    --content-max-width: 900px;
+}
+
+/* 响应式字体大小 */
+.content {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* 移动端优化 */
+@media screen and (max-width: 768px) {
+    .content {
+        font-size: 15px;
+        padding: 15px;
+    }
+    
+    /* 表格横向滚动 */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    /* 代码块不换行 */
+    pre {
+        overflow-x: auto;
+    }
+    
+    /* 标题字号调整 */
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.5em; }
+    h3 { font-size: 1.3em; }
+}
+
+/* 小屏幕进一步优化 */
+@media screen and (max-width: 480px) {
+    .content {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    h1 { font-size: 1.6em; }
+    h2 { font-size: 1.4em; }
+    h3 { font-size: 1.2em; }
+}
+
+/* 标题样式 */
+h1, h2, h3 {
+    margin-top: 1.5em;
+    color: var(--fg);
+}
+
+/* 表格样式 */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+}
+
+th, td {
+    border: 1px solid var(--table-border-color);
+    padding: 8px 12px;
+    text-align: left;
+}
+
+th {
+    background: var(--quote-bg);
+}
+
+/* 引用块 */
+blockquote {
+    border-left: 4px solid #0d9488;
+    padding-left: 1em;
+    margin-left: 0;
+    opacity: 0.9;
+}
+
+/* 代码块 */
+code {
+    font-size: 0.9em;
+}
+
+pre {
+    padding: 15px;
+    border-radius: 5px;
+}
