@@ -12,7 +12,6 @@ build-dir = "book"
 default-theme = "light"
 preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/li-hongmin/financial-book-opensource"
-git-repository-icon = "fa-github"
 
 [output.html.print]
 enable = true
