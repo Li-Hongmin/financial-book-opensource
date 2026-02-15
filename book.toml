@@ -1,7 +1,6 @@
 [book]
 authors = ["Li Hongmin"]
 language = "zh-CN"
-multilingual = false
 src = "src"
 title = "跟太太一起理财"
 description = "一本温暖的夫妻理财入门书"
