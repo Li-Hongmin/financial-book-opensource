@@ -13,6 +13,12 @@ default-theme = "light"
 preferred-dark-theme = "navy"
 git-repository-url = "https://github.com/li-hongmin/financial-book-opensource"
 additional-css = ["theme/custom.css"]
+smart-punctuation = true
+
+[output.html.search]
+enable = true
+limit-results = 30
+use-boolean-and = true
 
 [output.html.print]
 enable = true

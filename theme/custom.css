@@ -1,55 +1,90 @@
-/* 移动端适配 */
+/* ============================================
+   Research Engineering OS - Custom Theme
+   绿色/青色配色方案
+   ============================================ */
+
+/* 覆盖 mdBook 默认颜色变量 */
 :root {
     --content-max-width: 900px;
 }
 
-/* 响应式字体大小 */
+/* Light 主题 */
+.light {
+    --links: #0d9488;           /* teal-600 */
+    --links-hover: #0f766e;     /* teal-700 */
+    --sidebar-active: #0d9488;
+    --search-mark-bg: #99f6e4;  /* teal-200 */
+}
+
+/* Rust 主题 */
+.rust {
+    --links: #14b8a6;           /* teal-500 */
+    --links-hover: #2dd4bf;     /* teal-400 */
+    --sidebar-active: #14b8a6;
+    --search-mark-bg: #0f766e;
+}
+
+/* Coal 主题 (暗色) */
+.coal {
+    --links: #2dd4bf;           /* teal-400 */
+    --links-hover: #5eead4;     /* teal-300 */
+    --sidebar-active: #2dd4bf;
+    --search-mark-bg: #0f766e;
+}
+
+/* Navy 主题 (暗色) */
+.navy {
+    --links: #2dd4bf;           /* teal-400 */
+    --links-hover: #5eead4;     /* teal-300 */
+    --sidebar-active: #2dd4bf;
+    --search-mark-bg: #0f766e;
+}
+
+/* Ayu 主题 (暗色) */
+.ayu {
+    --links: #2dd4bf;           /* teal-400 */
+    --links-hover: #5eead4;     /* teal-300 */
+    --sidebar-active: #2dd4bf;
+    --search-mark-bg: #0f766e;
+}
+
+
+/* ============================================
+   Content Styles
+   ============================================ */
 .content {
     font-size: 16px;
     line-height: 1.7;
 }
 
-/* 移动端优化 */
-@media screen and (max-width: 768px) {
-    .content {
-        font-size: 15px;
-        padding: 15px;
-    }
-    
-    /* 表格横向滚动 */
-    table {
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-    
-    /* 代码块不换行 */
-    pre {
-        overflow-x: auto;
-    }
-    
-    /* 标题字号调整 */
-    h1 { font-size: 1.8em; }
-    h2 { font-size: 1.5em; }
-    h3 { font-size: 1.3em; }
-}
-
-/* 小屏幕进一步优化 */
-@media screen and (max-width: 480px) {
-    .content {
-        font-size: 14px;
-        padding: 10px;
-    }
-    
-    h1 { font-size: 1.6em; }
-    h2 { font-size: 1.4em; }
-    h3 { font-size: 1.2em; }
-}
-
-/* 标题样式 */
 h1, h2, h3 {
     margin-top: 1.5em;
+}
+
+/* 标题颜色 */
+.content h1,
+.content h2,
+.content h3 {
     color: var(--fg);
+}
+
+/* 代码块样式 */
+code {
+    font-size: 0.9em;
+}
+
+pre {
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* 引用块样式 */
+blockquote {
+    border-left: 4px solid var(--links);
+    padding-left: 1em;
+    margin-left: 0;
+    color: var(--fg);
+    opacity: 0.9;
 }
 
 /* 表格样式 */
@@ -69,20 +104,15 @@ th {
     background: var(--quote-bg);
 }
 
-/* 引用块 */
-blockquote {
-    border-left: 4px solid #0d9488;
-    padding-left: 1em;
-    margin-left: 0;
-    opacity: 0.9;
+/* 侧边栏当前章节高亮 */
+.chapter li.chapter-item a.active {
+    color: var(--sidebar-active);
+    font-weight: 600;
 }
 
-/* 代码块 */
-code {
-    font-size: 0.9em;
-}
-
-pre {
-    padding: 15px;
-    border-radius: 5px;
+/* 搜索框焦点样式 */
+#searchbar:focus {
+    border-color: var(--links);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(13, 148, 136, 0.2);
 }
